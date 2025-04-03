@@ -1,0 +1,13 @@
+The application is simple console chatbot that allows user to ask questions and get answers.
+
+1. Use OpenRouter API by passing base url and API key to Langchain's implementation 
+2. Use model "google/gemini-2.0-flash-lite-preview-02-05:free"
+3. Use OpenRouter API with provided credentials: 
+    - API Key: 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
+    - API Host: https://openrouter.ai/api/v1 
+    - Use Langchain for interacting with LLM
+    - just pass provided base url and key. DO NOT EXTEND LANGCHAIN'S CLASSES
+4. Create and always use Python virtual environment
+5. No fixed package versions required
+6. Run the application, test it in a console and fix all issues if needed
+7. Provide user instructions to run the application 
