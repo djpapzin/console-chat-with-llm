@@ -1,9 +1,15 @@
 import requests
 import json
+import os
+from dotenv import load_dotenv
 
 class ChatBot:
     def __init__(self):
-        self.api_key = "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"
+        load_dotenv()  # Load environment variables from .env file
+        self.api_key = os.getenv("OPENROUTER_API_KEY")
+        if not self.api_key:
+            raise ValueError("OPENROUTER_API_KEY environment variable is not set")
+            
         self.base_url = "https://openrouter.ai/api/v1"
         self.headers = {
             "Authorization": f"Bearer {self.api_key}",
